@@ -1,4 +1,5 @@
 import br.com.bruno.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.bruno.screenmatch.calculos.FiltroRecomendacao;
 import br.com.bruno.screenmatch.modelos.Filme;
 import br.com.bruno.screenmatch.modelos.Serie;
 import br.com.bruno.screenmatch.modelos.Titulo;
@@ -64,5 +65,8 @@ public class Main {
                 "\nEle teve " + serie.getTotalDasAvaliacoes() + " avaliações");
 
         System.out.println("Tempo total dos títulos selecionados " + calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(filme);
     }
 }
