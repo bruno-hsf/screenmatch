@@ -1,5 +1,6 @@
 import br.com.bruno.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.bruno.screenmatch.calculos.FiltroRecomendacao;
+import br.com.bruno.screenmatch.modelos.Epsodio;
 import br.com.bruno.screenmatch.modelos.Filme;
 import br.com.bruno.screenmatch.modelos.Serie;
 import br.com.bruno.screenmatch.modelos.Titulo;
@@ -15,6 +16,7 @@ public class Main {
         Titulo titulo = new Titulo();
         Filme filme = new Filme();
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
 
         System.out.println("*******************\n" +
                 "Filme\n" +
@@ -37,6 +39,8 @@ public class Main {
 
         System.out.println(filme.getNome() + " tem média de avaliações " + filme.pegaMedia() +
                 "\nEle teve " + filme.getTotalDasAvaliacoes() + " avaliações\n");
+
+        filtro.filtra(filme);
 
         System.out.println("Todos os filmes que selecionei tem tempo total de " + calculadora.getTempoTotal());
 
@@ -66,7 +70,15 @@ public class Main {
 
         System.out.println("Tempo total dos títulos selecionados " + calculadora.getTempoTotal());
 
-        FiltroRecomendacao filtro = new FiltroRecomendacao();
-        filtro.filtra(filme);
+        System.out.println("*******************\n" +
+                "Epsódio\n" +
+                "*******************");
+        Epsodio epsodio = new Epsodio();
+        epsodio.setSerie(serie);
+        System.out.println("Este epsódio pertence a série " + serie.getNome());
+        epsodio.setTotalVisualizacoes(300);
+        filtro.filtra(epsodio);
+        System.out.println("Sua classificação é " + epsodio.getClassificacao());
+
     }
 }

@@ -16,7 +16,7 @@ public interface Classificavel {
     getClassificacao.
      */
 
-    //criar um objeto, ou seja, um *new* no classificavel, não compila. Ele é um *contrato*
+    //criar um objeto, ou seja, um *new* classificavel, não compila. Ele é um *contrato*
     //criar uma referencia, ou seja, uma variável do tipo classificavel é ok
     int getClassificacao();
 }
