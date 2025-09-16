@@ -5,6 +5,8 @@ import br.com.bruno.screenmatch.modelos.Filme;
 import br.com.bruno.screenmatch.modelos.Serie;
 import br.com.bruno.screenmatch.modelos.Titulo;
 
+import java.util.ArrayList;
+
 /*
 **************************************************************************************
 Pacotes são usados para agrupar classes que estão relacionadas a alguma funcionalidade
@@ -32,6 +34,13 @@ public class Main {
 
         Filme filme2 = new Filme();
         filme2.setDuracaoEmMinutos(200);
+        filme2.setNome("Avatar");
+        filme2.setAnoLancamento("2001");
+
+        Filme filme3 = new Filme();
+        filme3.setNome("Vingadores");
+        filme3.setAnoLancamento("2004");
+        filme3.setDuracaoEmMinutos(180);
 
         calculadora.inclui(filme2);
 
@@ -43,6 +52,19 @@ public class Main {
         filtro.filtra(filme);
 
         System.out.println("Todos os filmes que selecionei tem tempo total de " + calculadora.getTempoTotal());
+
+        //criar lista de filmes
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filme);
+        listaDeFilmes.add(filme2);
+        listaDeFilmes.add(filme3);
+        System.out.println("Quantidade de itens no ArrayList é de " + listaDeFilmes.size());
+        System.out.println("Primeiro filme é " + listaDeFilmes.get(0).getNome());
+
+        System.out.println(listaDeFilmes);
+        //fiz override do método toString na Classe Filmes
+        System.out.println("O toString do filme " + listaDeFilmes.get(0).toString());
+
 
         System.out.println("\n*******************\n" +
                 "Série\n" +

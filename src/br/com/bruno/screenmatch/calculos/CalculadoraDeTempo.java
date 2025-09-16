@@ -29,7 +29,7 @@ public class CalculadoraDeTempo {
     //ou podemos usar polimorfismo, ou seja, um filme ou uma série é um Título
 
     public void inclui(Titulo t){
-        System.out.println("Adicionando duração em minutos de " + t);
+        System.out.println("Adicionando duração em minutos de " + t.getNome());
         this.tempoTotal += t.getDuracaoEmMinutos();
     }
 

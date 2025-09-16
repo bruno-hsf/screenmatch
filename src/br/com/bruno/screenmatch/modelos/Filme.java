@@ -33,4 +33,9 @@ public class Filme extends Titulo implements Classificavel {
         //tive que fazer um casting para retornar um valor inteiro
         return (int) pegaMedia()/2;
     }
+
+    @Override
+    public String toString() {
+        return "Filme " + this.getNome() + " (" + this.getAnoLancamento() + ")";
+    }
 }
