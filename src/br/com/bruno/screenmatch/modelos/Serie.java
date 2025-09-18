@@ -6,6 +6,10 @@ public class Serie extends Titulo {
     private boolean ativa;
     private int minutosPorEpisodio = 0;
 
+    public Serie(String nome, String anoLancamento) {
+        super(nome, anoLancamento);
+    }
+
     @Override
     public void exibeFichaTecnica() {
         System.out.println("Nome da série: " + this.getNome() +

@@ -15,8 +15,8 @@ Como a classe Filmes está em outro pacote eu tornei os métodos Public
  */
 public class Main {
     public static void main(String[] args) {
-        Titulo titulo = new Titulo();
-        Filme filme = new Filme();
+        //Titulo titulo = new Titulo();
+        Filme filme = new Filme("Rambo","1982");
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         FiltroRecomendacao filtro = new FiltroRecomendacao();
 
@@ -27,19 +27,19 @@ public class Main {
         filme.avalia(9);
         filme.avalia(10);
 
-        filme.setNome("Rambo");
-        filme.setAnoLancamento("1982");
+        //filme.setNome("Rambo");
+        //filme.setAnoLancamento("1982");
         filme.setDuracaoEmMinutos(110);
         calculadora.inclui(filme);
 
-        Filme filme2 = new Filme();
+        Filme filme2 = new Filme("Avatar","2001");
         filme2.setDuracaoEmMinutos(200);
-        filme2.setNome("Avatar");
-        filme2.setAnoLancamento("2001");
+        //filme2.setNome("Avatar");
+        //filme2.setAnoLancamento("2001");
 
-        Filme filme3 = new Filme();
-        filme3.setNome("Vingadores");
-        filme3.setAnoLancamento("2004");
+        Filme filme3 = new Filme("Vingadores", "2004");
+        //filme3.setNome("Vingadores");
+        //filme3.setAnoLancamento("2004");
         filme3.setDuracaoEmMinutos(180);
 
         calculadora.inclui(filme2);
@@ -71,14 +71,14 @@ public class Main {
                 "*******************");
 
         //instanciar uma série
-        Serie serie = new Serie();
+        Serie serie = new Serie("House", "2000");
 
         serie.avalia(8);
         serie.avalia(9);
         serie.avalia(10);
 
-        serie.setNome("House");
-        serie.setAnoLancamento("2000");
+        //serie.setNome("House");
+        //serie.setAnoLancamento("2000");
         serie.setMinutosPorEpisodio(45);
         serie.setTemporadas(1);
         serie.setEpsodiosPorTemporada(6);

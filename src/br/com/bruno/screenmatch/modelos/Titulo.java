@@ -8,6 +8,11 @@ public class Titulo {
     private double somaDasAvaliacoes;
     private int totalDasAvaliacoes;
 
+    public Titulo(String nome, String anoLancamento){
+        this.nome = nome;
+        this.anoLancamento = anoLancamento;
+    }
+
     public void exibeFichaTecnica() {
         System.out.println("Nome do título é: " + this.nome +
                 "\nO ano do título é: " + this.anoLancamento +

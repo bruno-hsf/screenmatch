@@ -15,7 +15,10 @@ public class Filme extends Titulo implements Classificavel {
 
     public String getDiretor() {
         return diretor;
+    }
 
+    public Filme(String nome, String anoLancamento) {
+        super(nome, anoLancamento);
     }
 
     public void setDiretor(String diretor) {
@@ -31,7 +34,7 @@ public class Filme extends Titulo implements Classificavel {
     @Override
     public int getClassificacao() {
         //tive que fazer um casting para retornar um valor inteiro
-        return (int) pegaMedia()/2;
+        return (int) pegaMedia() / 2;
     }
 
     @Override
