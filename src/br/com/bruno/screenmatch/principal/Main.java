@@ -1,9 +1,10 @@
+package br.com.bruno.screenmatch.principal;
+
 import br.com.bruno.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.bruno.screenmatch.calculos.FiltroRecomendacao;
 import br.com.bruno.screenmatch.modelos.Epsodio;
 import br.com.bruno.screenmatch.modelos.Filme;
 import br.com.bruno.screenmatch.modelos.Serie;
-import br.com.bruno.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 

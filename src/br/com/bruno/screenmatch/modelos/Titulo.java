@@ -1,6 +1,6 @@
 package br.com.bruno.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     private String nome;
     private String anoLancamento;
     private int duracaoEmMinutos;
@@ -55,4 +55,14 @@ public class Titulo {
     public String getNome() {
         return this.nome;
     }
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        /*Como o título é um texto, não precisamos fazer algo muito complexo. No retorno podemos colocar
+        um this.getNome.compareTo(), conseguimos usar o compareTo() aqui porque Nome também é uma string
+        e string já tem o compareTo() implementado.*/
+        return this.getNome().compareTo(outroTitulo.getNome());
+    }
+
+
 }
