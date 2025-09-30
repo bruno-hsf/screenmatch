@@ -6,6 +6,7 @@ import br.com.bruno.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class MainComListas {
     public static void main(String[] args) {
@@ -54,6 +55,14 @@ public class MainComListas {
         System.out.println(listaFruta);
 
         Collections.sort(lista);
+        System.out.println(lista);
+
+        /*
+        Usar a interface Comparator para comparar pelo ano e não mais pelo nome
+        :: é uma estrutura lambda
+        */
+        lista.sort(Comparator.comparing(Titulo::getAnoLancamento));
+        System.out.println("Oredenando por ano em ordem crescente");
         System.out.println(lista);
     }
 
